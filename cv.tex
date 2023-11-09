@@ -15,28 +15,38 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{tcolorbox}
 \usepackage{marvosym}
-\usepackage{genealogytree}
 \usepackage{hyperref}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 
-%\colorlet{bgcol}{LimeGreen!40!white}
-\colorlet{bgcol}{LimeGreen}
+% Background Color of the Sidebar Column and titles
+\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
+% Border color of the siderbar and titles
+\definecolor{sidefg}{cmyk}{1, 0.02, 0, 0.8}
+% Background Color of the Main Column
+\definecolor{mainbg}{cmyk}{0, 0, 0.07, 0.04}
+% Text Color of the Main Column
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+% Text Color of the Sidebar Column
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+% \colorlet{bgcol}{LimeGreen}
+% \colorlet{fgcol}{ForestGreen}
 \newcommand{\circb}[1]{\begin{minipage}{1cm}
-    \begin{tcolorbox}[colback=Green,colframe=Green,
+    \begin{tcolorbox}[colback=sidefg,colframe=sidefg,coltext=sidetext,
         halign=flush center, valign=center, square, circular arc,
         width=0.8cm, left=0cm, right=0cm]
         {\large #1}
     \end{tcolorbox}
 \end{minipage}}
 \newcommand{\cvtitle}[1]{
-    \begin{tcolorbox}[colback=bgcol,colframe=ForestGreen,
+    \begin{tcolorbox}[colback=sidebg,colframe=sidefg,coltext=sidetext,
         height=1cm, valign=center, sharp corners=downhill]
         {\Large #1}
     \end{tcolorbox}
 }
-\newcommand{\gritem}{\color{bgcol}$\blacksquare$}
+\newcommand{\gritem}{\color{sidebg}$\blacksquare$}
 \renewcommand{\labelitemi}{\gritem}
-\newcommand{\griitem}{\color{bgcol}$\blacktriangleright$}
+\newcommand{\griitem}{\color{sidebg}$\blacktriangleright$}
 \renewcommand{\labelitemii}{\griitem}
 \newcommand{\myspace}{{\color{LimeGreen}\dotfill}}
 
@@ -54,11 +64,12 @@
 
 \begin{minipage}[c]{0.35\linewidth}
     \begin{tcolorbox}[
-        colback=bgcol,
-        colframe=ForestGreen,
+        colback=sidebg,
+        colframe=sidefg,
+        coltext=sidetext,
         subtitle style={
-            colback=bgcol,
-            coltext=black
+            colback=sidebg,
+            coltext=sidetext
         },
         leftrule=2mm,
         sharp corners=uphill,
@@ -76,7 +87,7 @@
 
         \vspace{0.2cm}
         {\small
-        \circb{\gtrsymBorn} September 19, 1996 \newline
+        \circb{\textborn} September 19, 1996 \newline
         \circb{\Telefon} +33~(0)609642210 \newline
         \circb{\Letter} \href{mailto:luc.chabassier@ens.fr}{luc.chabassier@ens.fr} \newline
         \circb{\Mundus} \href{https://dwarfmaster.net}{dwarfmaster.net} \newline
@@ -102,13 +113,14 @@
         \tcbsubtitle{\Large\bf Skills}
         \begin{description}\setlength{\itemsep}{0em}
           \item[C++]\hfill\skexp
-          \item[Haskell]\hfill\skexp
-          \item[\LaTeX]\hfill\skexp
-          \item[Linux]\hfill\skexp
+          \item[Rust]\hfill\skexp
+          \item[Shell]\hfill\skexp
+          \item[Nix]\hfill\skexp
+          \item[Haskell]\hfill\skmore
+          \item[\LaTeX]\hfill\skmore
           \item[Coq]\hfill\skmore
           \item[Prolog]\hfill\skmore
-          \item[Nix]\hfill\skmore
-          \item[OCaml]\hfill\skdabb
+          \item[OCaml]\hfill\skmore
           \item[Python]\hfill\skdabb
         \end{description}
 
@@ -121,6 +133,8 @@
     \end{tcolorbox}\end{minipage}
     \hfill
     \begin{minipage}[c][282mm][t]{0.60\linewidth}
+      \pagecolor{mainbg}
+      \color{maintext}{
 
         \cvtitle{Education}
 
@@ -136,7 +150,7 @@
                   \item \textbf{2017-2018} First year of computer science master's degree
                   \item \textbf{2018-2019} Mathematics bahelor's degree
                   \item \textbf{2020-2021} MPRI: Second year of computer science master's degree
-                  \item \textbf{2021-?} PhD at Dedukteam, INRIA \emph{(unfinished)}
+                  \item \textbf{2021-?} PhD at Deducteam, INRIA \emph{(unfinished)}
                 \end{itemize}
         \end{itemize}
 
@@ -157,9 +171,14 @@
                 \lang{\LaTeX}{4k}\\
                 Category theoretic approach to CSPs
                 \director{Damianno Mazza}
-          \item \emph{\small (2021)} \textbf{4.5 months internship} \emph{(future)}
-                \lang{Dedukti}{4k}\\
+          \item \emph{\small (2021)} \textbf{\href{https://github.com/dwarfmaster/ett-in-lambdapi}{4.5 months internship}}
+                \lang{Lambdapi}{4k}\\
                 Encoding extensional type theories in Dedukti
+                \director{Bruno Barras} \\
+                Laboratoire de Méthodes Formelles at Inria Paris-Saclay
+          \item \emph{\small (2022\dots)} \textbf{\href{https://github.com/dwarfmaster/commutative-diagrams}{PhD}} \emph{ongoing}
+                \lang{OCaml/Rust}{15k} \\
+                Encoding category theory in $\lambda\Pi$-modulo
                 \director{Bruno Barras} \\
                 Laboratoire de Méthodes Formelles at Inria Paris-Saclay
         \end{itemize}
@@ -173,7 +192,7 @@
           \item \emph{\small (2016)} \textbf{Project} \href{https://github.com/TWal/ENS\_Adac}{Adac}
                 \lang{Haskell}{4k}\\
                 A compiler for a subset of Ada
-          \item \emph{\small (2017)} \textbf{Project} \href{https://github.com/lucas8/absint}{Absint}
+          \item \emph{\small (2017)} \textbf{Project} \href{https://github.com/dwarfmaster/absint}{Absint}
                 \lang{Haskell}{1k}\\
                 Abstract interpreter for a subset of C
           \item \emph{\small (2018)} \textbf{Presentation} \href{https://sapt.fr/exposes/verification-automatique-de-preuves-884}{Vérification de preuve}
@@ -183,14 +202,12 @@
                 \lang{C++}{5k}\\
                 Analysis of code using web frameworks in \href{https://labs.oracle.com/pls/apex/f?p=LABS:project_details:0:13}{Parfait}\\
                 ORACLE labs in Brisbane
-          \item \emph{\small (2020)} \textbf{Project} \href{https://github.com/dwarfmaster/free_group_coq}{Free Group}
-                \lang{Coq}{1k}\\
-                Formalisation of the free group construction
           \item \emph{\small (2020)} \textbf{Project} \href{https://github.com/math-fehr/Untitled-Language}{Untitled Language}
                 \lang{Haskell}{2.5k}\\
                 A functional programming language with linear types
         \end{itemize}
 
+      }
     \end{minipage}
 
 \end{document}
