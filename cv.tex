@@ -50,13 +50,6 @@
 \renewcommand{\labelitemii}{\griitem}
 \newcommand{\myspace}{{\color{LimeGreen}\dotfill}}
 
-\renewcommand{\wp}[1]  {\begin{minipage}[b][2mm][c]{3mm} #1 \end{minipage}}
-\colorlet{skcol}{OliveGreen}
-\colorlet{noskcol}{LimeGreen}
-\newcommand{\skdabb} {\colorbox{ForestGreen!80!white}{\color{skcol}$\blacksquare$~\color{noskcol}$\blacksquare$~\color{noskcol}$\blacksquare$}}
-\newcommand{\skmore} {\colorbox{ForestGreen!80!white}{\color{skcol}$\blacksquare$~\color{skcol}$\blacksquare$~\color{noskcol}$\blacksquare$}}
-\newcommand{\skexp}  {\colorbox{ForestGreen!80!white}{\color{skcol}$\blacksquare$~\color{skcol}$\blacksquare$~\color{skcol}$\blacksquare$}}
-
 \newcommand{\lang}[2]{\hfill \textsc{\scriptsize #1, \textasciitilde#2Sloc}}
 \newcommand{\director}[1]{\hfill {\scriptsize #1}}
 
@@ -75,17 +68,14 @@
         sharp corners=uphill,
         height=282mm,
     ]
-        \begin{minipage}{0.45\linewidth}
-            \includegraphics[width=\linewidth]{head.jpg}
-        \end{minipage}
-        \hfill
-        \begin{minipage}{0.45\linewidth}
+        {
+          \Large
             Luc
 
             \textbf{Chabassier}
-        \end{minipage}
+        }
 
-        \vspace{0.2cm}
+        \vspace{1cm}
         {\small
         \circb{\textborn} September 19, 1996 \newline
         \circb{\Telefon} +33~(0)609642210 \newline
@@ -97,23 +87,35 @@
         \vspace{0.3cm}
         \tcbsubtitle{\Large\bf Interests}
 
-        Programming, Type Theory, Proof Assistants,
-        Abstract Interpretation, Formal Systems
-
+        Programming, Type Theory, Proof Assistants, Abstract Interpretation,
+        Formal Systems, Programming languages design, Operating systems,
+        Embedded programming
 
         \vspace{0.3cm}
-        \tcbsubtitle{\Large\bf Skills}
+        \tcbsubtitle{\Large\bf PL Skills}
         \begin{description}\setlength{\itemsep}{0em}
-          \item[C++]\hfill\skexp
-          \item[Rust]\hfill\skexp
-          \item[Shell]\hfill\skexp
-          \item[Nix]\hfill\skexp
-          \item[Haskell]\hfill\skmore
-          \item[\LaTeX]\hfill\skmore
-          \item[Coq]\hfill\skmore
-          \item[Prolog]\hfill\skmore
-          \item[OCaml]\hfill\skmore
-          \item[Python]\hfill\skdabb
+          \item[C++]\hfill\emph{50kSloc}
+          \item[Nix]\hfill\emph{15kSloc}
+          \item[Rust]\hfill\emph{10kSloc}
+          \item[Haskell]\hfill\emph{10kSloc}
+          \item[OCaml]\hfill\emph{5kSloc}
+          \item[Prolog]\hfill\emph{2kSloc}
+          \item[Coq]\hfill\emph{1kSloc}
+          \item[Bash/ZSH/nushell]\hfill\emph{1kSloc}
+          \item[Other] Lisp, Ruby, Perl, Julia, Python, Lua, C\#, Idris
+        \end{description}
+
+        \vspace{0cm}
+        \tcbsubtitle{\Large\bf OS Contributions}
+        % \begin{itemize}[label=\textcolor{mainbg}{$\blacksquare$}]
+        \begin{description}
+          \setlength{\itemsep}{0em}
+          \item[\href{https://github.com/imain/notmuch-vim}{notmuch-vim}]
+          \item[\href{https://github.com/the-lambda-church/coquille}{coquille}]
+          \item[\href{https://github.com/NixOS/nixpkgs}{Nixpkgs}]
+          \item[\href{https://github.com/benoitc/gunicorn}{gunicorn}]
+          \item[\href{https://github.com/nix-community/nixvim}{Nixvim}]
+          \item[\href{https://github.com/danth/stylix}{Stylix}]
         \end{description}
 
         \vspace{0cm}
@@ -207,7 +209,7 @@
                 The configuration for all my computers and servers
           \item \emph{\small (2020)} \textbf{Project} Homology
                 \lang{C++}{1.5k}\\
-                Computes the homology of an OBJ file
+                Computes the simplicial homology of an OBJ file
           \item \emph{\small (2020)} \textbf{Project} \href{https://github.com/math-fehr/Untitled-Language}{Untitled Language}
                 \lang{Haskell}{2.5k}\\
                 A functional programming language with linear types
