@@ -29,8 +29,6 @@
 % Text Color of the Sidebar Column
 \definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
 
-% \colorlet{bgcol}{LimeGreen}
-% \colorlet{fgcol}{ForestGreen}
 \newcommand{\circb}[1]{\begin{minipage}{1cm}
     \begin{tcolorbox}[colback=sidefg,colframe=sidefg,coltext=sidetext,
         halign=flush center, valign=center, square, circular arc,
@@ -41,7 +39,7 @@
 \newcommand{\cvtitle}[1]{
     \begin{tcolorbox}[colback=sidebg,colframe=sidefg,coltext=sidetext,
         height=1cm, valign=center, sharp corners=downhill]
-        {\Large #1}
+        {\large #1}
     \end{tcolorbox}
 }
 \newcommand{\gritem}{\color{sidebg}$\blacksquare$}
@@ -106,9 +104,9 @@
         \tcbsubtitle{\Large\bf PL Skills}
         \begin{description}\setlength{\itemsep}{0em}
           \item[C++]\hfill\emph{50kSloc}
+          \item[Haskell]\hfill\emph{30kSloc}
           \item[Nix]\hfill\emph{15kSloc}
           \item[Rust]\hfill\emph{10kSloc}
-          \item[Haskell]\hfill\emph{10kSloc}
           \item[OCaml]\hfill\emph{5kSloc}
           \item[Prolog]\hfill\emph{2kSloc}
           \item[Coq]\hfill\emph{1kSloc}
@@ -124,6 +122,7 @@
           \item Git/GitHub
           \item \LaTeX
           \item Unix shell
+          \item Nix/NixOS
         \end{itemize}
 
         \vspace{0cm}
@@ -151,7 +150,7 @@
           \item \emph{École Normale Supérieure} in Paris:
                 \begin{itemize}[topsep=0em]
                   \itemsep0em
-                  \item \textbf{2016-2017} Computer science bacherlor's degree
+                  \item \textbf{2016-2017} Computer science bachelor's degree
                   \item \textbf{2017-2018} First year of computer science master's degree
                   \item \textbf{2018-2019} Mathematics bahelor's degree
                   \item \textbf{2020-2021} MPRI: Second year of computer science master's degree
@@ -172,10 +171,10 @@
                 Infering frames semantics
                 \director{Marie-Claude L'Homme}\\
                 Département de linguistique à UdeM
-          \item \emph{\small (2019)} \textbf{\href{https://github.com/dwarfmaster/memoire-dma-l3}{Maths dissertation}}
-                \lang{\LaTeX}{4k}\\
-                Category theoretic approach to CSPs
-                \director{Damianno Mazza}
+          % \item \emph{\small (2019)} \textbf{\href{https://github.com/dwarfmaster/memoire-dma-l3}{Maths dissertation}}
+          %       \lang{\LaTeX}{4k}\\
+          %       Category theoretic approach to CSPs
+          %       \director{Damianno Mazza}
           \item \emph{\small (2019-2020)} \textbf{5.5 months internship}
                 \lang{C++}{5k}\\
                 Static analysis of java in \href{https://labs.oracle.com/pls/apex/f?p=LABS:project_details:0:13}{Parfait}
@@ -186,11 +185,14 @@
                 Encoding extensional type theories in Dedukti
                 \director{Bruno Barras} \\
                 Laboratoire de Méthodes Formelles at Inria Paris-Saclay
-          \item \emph{\small (2022\dots)} \textbf{\href{https://github.com/dwarfmaster/commutative-diagrams}{PhD}} \emph{ongoing}
+          \item \emph{\small (2021-2024)} \textbf{\href{https://github.com/dwarfmaster/commutative-diagrams}{PhD}}
                 \lang{OCaml/Rust}{15k} \\
-                Encoding category theory in $\lambda\Pi$-modulo
+                Aspects of category theory in proof assistants
                 \director{Bruno Barras} \\
                 Laboratoire de Méthodes Formelles at Inria Paris-Saclay
+          \item \emph{\small (2024\dots)} \textbf{Railway safety engineer} \\
+                \href{https://www.clearsy.com/}{ClearSy}
+                \director{Cyrille Delon}
         \end{itemize}
 
         \cvtitle{Other Experiences}
@@ -209,9 +211,6 @@
           \item \emph{\small (2017)} \textbf{Project} \href{https://github.com/dwarfmaster/ENS_sysres}{Sysres}
                 \lang{C}{2.5k}\\
                 A IP/Ethernet stack for GNU/Hurd
-          \item \emph{\small (2018)} \textbf{Presentation} \href{https://sapt.fr/exposes/verification-automatique-de-preuves-884}{Vérification de preuve}
-                \lang{\LaTeX}{2k}\\
-                Popularization of some proof theoretic results
           \item \emph{\small (2019\dots)} \textbf{Project} \href{https://github.com/dwarfmaster/home-nix}{Home-nix}
                 \lang{Nix}{10k}\\
                 The configuration for all my computers and servers
@@ -221,6 +220,9 @@
           \item \emph{\small (2020)} \textbf{Project} \href{https://github.com/math-fehr/Untitled-Language}{Untitled Language}
                 \lang{Haskell}{2.5k}\\
                 A functional programming language with linear types
+          \item \emph{\small (2023\dots)} \textbf{Project} \href{https://github.com/dwarfmaster/korrvigs}{Korrvigs}
+                \lang{Haskell}{20k}\\
+                A personal wiki/knowledge base with web interface
         \end{itemize}
 
       }
